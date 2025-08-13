@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+      <head>
+
+          <title>Zahlen raten</title>
+
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        
+       
+      </head>
+    
+    
+        <body>
+
+            <script>
+                var ausgedachteZahl;
+                var obereGrenze = 100;
+                var gerateneZahl;
+                var anzahlDerVersuche = 0;
+      
+                ausgedachteZahl = Math.random() * obereGrenze;
+                ausgedachteZahl = Math.round (ausgedachteZahl + 0.5);
+      
+                do{
+                      gerateneZahl = prompt("Rate bitte", "Eine Zahl bis " + obereGrenze);
+      
+                      if(gerateneZahla > ausgedachteZahl)
+                      {
+                          alert("Deine Zahl ist zu gross");
+      
+                      }
+                      if(gerateneZahla < ausgedachteZahl)
+                      {
+                          alert("Deine Zahl ist zu klein");
+      
+                      }
+                      anzahlDerVersuche = anzahlDerVersuche + 1;
+
+                  } while (gerateneZahl != ausgedachteZahl && anzahlDerVersuche <=10 );
+      
+                  if(gerateneZahl == ausgedachteZahl)
+                  {
+      
+                      alert("Richtig geraten!");
+                  }
+      
+                     alert("Du hast " + anzahlDerVersuche + "Mal geraten");
+      
+                     if(gerateneZahl != ausgedachteZahl)
+                     {
+                      alert("Du konntest die Zahl nicht  erraten!");
+      
+                     }
+      
+      
+      
+              </script>
+    	
+        </body>
+</html>
